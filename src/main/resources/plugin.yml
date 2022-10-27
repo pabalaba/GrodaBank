@@ -1,0 +1,8 @@
+name: GrodaBank
+version: '${project.version}'
+main: chr.ptr.main.Main
+api-version: 1.18
+commands:
+  money:
+  pay:
+  logs:
