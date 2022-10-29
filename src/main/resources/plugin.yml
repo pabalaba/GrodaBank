@@ -5,4 +5,4 @@ api-version: 1.18
 commands:
   money:
   pay:
-  logs:
+  setmoney:

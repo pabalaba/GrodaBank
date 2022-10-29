@@ -36,6 +36,10 @@ public class GBPlayer implements IGBPlayer{
         this.balance = balance;
     }
 
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
+
     @Override
     public BigDecimal getBalance() {
         return this.balance;
