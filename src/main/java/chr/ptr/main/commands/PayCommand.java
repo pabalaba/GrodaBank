@@ -1,5 +1,6 @@
 package chr.ptr.main.commands;
 
+import chr.ptr.main.Main;
 import chr.ptr.main.logs.GBLogger;
 import chr.ptr.main.managers.GBManager;
 import org.bukkit.Bukkit;
@@ -34,8 +35,8 @@ public class PayCommand implements CommandExecutor {
             }
             if(amount.equals(BigDecimal.ZERO))
                 return true;
-            GBManager.getPlayer(rec).deposit(amount);
-            GBManager.console.withdraw(amount);
+            Main.getBank().getPlayer(rec).deposit(amount);
+            Main.getBank().getConsole().withdraw(amount);
             rec.sendMessage("You received "+amount+" from console!");
             sender.sendMessage("You sent "+amount+" to "+rec.getDisplayName()+"!");
             GBLogger.writeLogPay(amount,rec.getDisplayName(),"console");

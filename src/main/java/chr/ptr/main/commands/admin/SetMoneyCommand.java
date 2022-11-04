@@ -1,5 +1,6 @@
 package chr.ptr.main.commands.admin;
 
+import chr.ptr.main.Main;
 import chr.ptr.main.logs.GBLogger;
 import chr.ptr.main.managers.GBManager;
 import org.bukkit.Bukkit;
@@ -47,7 +48,7 @@ public class SetMoneyCommand implements CommandExecutor {
             return true;
         }
 
-        GBManager.getPlayer(target).setBalance(amount);
+        Main.getBank().getPlayer(target).setBalance(amount);
         GBLogger.writeLogSet(amount,target.getDisplayName(),sender instanceof Player player?player.getDisplayName():"console");
         return true;
     }
